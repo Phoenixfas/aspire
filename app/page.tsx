@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Aspire Ethiopia</h1>
+      <h1>Aspire Ethiopia Home</h1>
     </main>
   )
 }
