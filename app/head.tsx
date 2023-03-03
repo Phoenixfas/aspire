@@ -21,6 +21,10 @@ export default function Head() {
       <meta name="twitter:card" content="summary_large_image" />
       {/* <!-- Add Favicon --> */}
       <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
+      {/* <!-- Add Fonts --> */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
     </>
   )
 }
