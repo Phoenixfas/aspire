@@ -37,3 +37,15 @@
 /* 00a350 */
 /* e8a776 */
 /* ac3852 */
+
+
+/* //////////////////////////////////////////////////// AutoScroller ////////////////////////////////////////////////////////// */
+.infinite-auto-scroller {
+  overflow: hidden;
+  height: 300px;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+}
