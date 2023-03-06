@@ -113,7 +113,7 @@
   justify-content: center;
   font-size: 1.5rem;
   color: #e8a776;
-  background-color: #000;
+  background-color: #00a350;
   border-radius: 999px;
   cursor: pointer;
   transition: .3s;
@@ -139,7 +139,7 @@
   font-weight: bold;
   padding: 15px 50px;
   border-radius: 999px;
-  background-color: #000;
+  background-color: #00a350;
   color: #e8a776;
   margin-top: 50px;
   cursor: pointer;
@@ -147,5 +147,5 @@
 }
 .scroll__moreBtn:hover{
   background-color: #e8a776;
-  color: #000;
+  color: #00a350;
 }
