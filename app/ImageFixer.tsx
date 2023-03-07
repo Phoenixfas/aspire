@@ -3,6 +3,8 @@ import { useRef, useEffect, useState } from "react"
 import style from "@/styles/Home.module.css"
 import Image from "next/image"
 import { AnimatePresence, motion } from "framer-motion"
+import { Player } from '@lottiefiles/react-lottie-player';
+import Link from "next/link"
 
 export default function ImageFixer() {
     const [active, setActive] = useState(false)
@@ -53,18 +55,74 @@ export default function ImageFixer() {
   return (
     <div id="fixer" className={style.fixer}>
         <div id="fixer_left" className={style.fixer__left}>
+            {active && <div className={style.fixer__leftText}>
+                Lorem ipsum dolor sit
+            </div>}
+            {!active && <div className={style.fixer__leftText}>
+                consectetur adipisicing elit
+            </div>}
             <AnimatePresence>
-                {active && <div className={style.fixer__left__img}>
+                <div className={`${style.fixer__left__img} ${active && style.fixer__leftVisible}`}>
                     <Image src="/images/home/coffee.jpg" alt="Coffee" width={500} height={500} />
-                </div>}
-                {!active && <div className={style.fixer__left__img}>
+                </div>
+                <div className={`${style.fixer__left__img} ${!active && style.fixer__leftVisible}`}>
                     <Image src="/images/home/wheat.jpg" alt="Wheat" width={500} height={500} />
-                </div>}
+                </div>
             </AnimatePresence>
         </div>
         <div id="fixer_right" className={style.fixer__right}>
-            <div className={style.fixer__right__top}></div>
-            <div id="trigger" className={style.fixer__right__bottom}></div>
+            <div className={style.fixer__right__top}>
+                <div className={style.fixer__right__top__title}>
+                    Lorem ipsum
+                </div>
+                <div className={style.fixer__right__top__content}>
+                    <div className={style.fixer__right__top__text}>
+                        {/* <Player autoplay loop src="https://assets7.lottiefiles.com/private_files/lf30_4lyswkde.json" style={{ height: '150px', width: '100px' }} /> */}
+                        <Image src="/images/home/growth.png" alt="growth" width={500} height={500} />
+                        <div>
+                            <p><span>Growth</span></p>
+                            <p>Lorem ipsum dolor  veniam voluptatum libero voluptates!</p>
+                        </div>
+                    </div>
+                    <div className={style.fixer__right__top__text}>
+                        {/* <Player autoplay loop src="https://assets7.lottiefiles.com/private_files/lf30_4lyswkde.json" style={{ height: '150px', width: '100px' }} /> */}
+                        <Image src="/images/home/barn.png" alt="barn" width={500} height={500} />
+                        <div>
+                            <p><span>Industry</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur aperiam ipsam nesciunt!</p>
+                        </div>
+                    </div>
+                </div>
+                <div className={style.fixer__right__top__footer}>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dignissimos voluptas quae pariatur velit saepe! Repellendus fugiat excepturi ad, quae officia animi accusamus nihil repellat.</p>
+                    <Link href="/">
+                        Learn More
+                    </Link>
+                </div>
+            </div>
+            <div id="trigger" className={style.fixer__right__bottom}>
+                <div className={style.fixer__right__top__title}>
+                    Discover
+                </div>
+                <div className={style.fixer__right__top__content}>
+                    <div className={style.fixer__right__bottom__text}>
+                        <Image src="/images/home/tomato.jpg" alt="tomato" width={500} height={500} />
+                        <div>
+                            <p><span>Lorem</span></p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit distinctio corporis nulla maxime praesentium accusamus.</p>
+                        </div>
+                    </div>
+                    <div style={{borderLeft:"5px solid #000", height: "100%"}}></div>
+                    <div className={style.fixer__right__bottom__text}>
+                        <Image src="/images/home/watermelon.jpg" alt="watermelon" width={500} height={500} />
+                        <div>
+                            <p><span>Ipsum</span></p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil molestiae dolor accusamus error reprehenderit hic similique minima?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   )
